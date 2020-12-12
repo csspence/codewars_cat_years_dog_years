@@ -20,7 +20,23 @@ Dog Years
 
 */
 
-var humanYearsCatYearsDogYears = function(humanYears) {
-  // Your code here!
-  return [0,0,0];
+const humanYearsCatYearsDogYears = (humanYears) => {
+  let array = [humanYears];
+  let catYears = 0;
+  let dogYears = 0;
+  for(let i = 1; i < humanYears + 1; i++) {
+    if(i === 1) {
+      catYears += 15;
+      dogYears += 15;
+    } else if(i === 2) {
+      catYears += 9;
+      dogYears += 9;
+    } else {
+      catYears += 4;
+      dogYears += 5;
+    }
+  }
+  array.push(catYears, dogYears);
+
+  return array;
 }
